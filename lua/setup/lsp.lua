@@ -3,10 +3,11 @@ local M = {}
 local function setup_clangd()
 	local lspconf = require("lspconfig")
 	lspconf.clangd.setup({
-		cmd = {
-			'clangd',
-			'--query-driver=/usr/bin/g++'
-		},
+--		cmd = {
+--			'clangd',
+--			'--query-driver=/usr/bin/g++',
+--			'--query-driver=/opt/microchip/xc16/v2.10/bin/xc16-gcc'
+--		},
 		filetypes = { "c", "cpp" },
 	})
 end
