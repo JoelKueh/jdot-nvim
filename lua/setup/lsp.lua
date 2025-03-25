@@ -72,6 +72,7 @@ function M.setup_lsp()
 	lspconf.jdtls.setup({})
 	lspconf.texlab.setup({})
 	lspconf.pylsp.setup({})
+	lspconf.ltex.setup({})
 	--lspconf.omnisharp.setup({})
 end
 

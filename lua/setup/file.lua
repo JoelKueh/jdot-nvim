@@ -30,6 +30,7 @@ function M.setup_treesitter()
 			"typescript",
 			"xml",
 			"yaml",
+			"latex"
 		},
 		incremental_selection = {
 			enable = true,
