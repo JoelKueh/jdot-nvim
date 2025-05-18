@@ -28,7 +28,7 @@ return {
 		event = { "BufReadPre", "BufNewFile", "VeryLazy" },
 		dependencies = {
 			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
+			-- "williamboman/mason-lspconfig.nvim",
 			"hrsh7th/nvim-cmp",
 			"L3MON4D3/LuaSnip",
 		},
