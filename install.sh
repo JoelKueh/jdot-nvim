@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 # Install Neovim
-sudo dnf install -y neovim
+sudo zypper in neovim
 
 # Update configs
 SCRIPT=$(realpath "$0")

@@ -52,5 +52,10 @@ return {
 		'kaarmu/typst.vim',
 		ft = 'typst',
 		lazy=false,
+	},
+	-- nvim-dap
+	{
+		'mfussenegger/nvim-dap',
+		lazy=true
 	}
 }

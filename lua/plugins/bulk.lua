@@ -17,15 +17,15 @@ return {
 	},
 	{
 		"sainnhe/sonokai",
-		lazy = false,
-		priority = 1000, -- make sure to load this before all the other start plugins
-		config = function()
-			vim.cmd.colorscheme("sonokai")
-		end
+		event = "VeryLazy"
 	},
 	{
 		"catppuccin/nvim",
-		event = "VeryLazy"
+		lazy = false,
+		priority = 1000, -- make sure to load this before all the other start plugins
+		config = function()
+			vim.cmd.colorscheme("catppuccin-mocha")
+		end
 	},
 	{
 		"Mofiqul/vscode.nvim",
