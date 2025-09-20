@@ -59,5 +59,14 @@ return {
 		opts = {
 
 		}
+	},
+	-- hexer
+	{
+		'RaafatTurki/hex.nvim',
+		config = function()
+			vim.keymap.set("n", '<leader>hv', require 'hex'.toggle, {
+				desc="Open hex editor"
+			})
+		end
 	}
 }

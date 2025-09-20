@@ -57,5 +57,15 @@ return {
 	{
 		'mfussenegger/nvim-dap',
 		lazy=true
+	},
+	-- system-verilog
+	{
+		'vhda/verilog_systemverilog.vim',
+		lazy=true
+	},
+	-- conform.nvim
+	{
+		'stevearc/conform.nvim',
+		config = lsp.setup_conform
 	}
 }

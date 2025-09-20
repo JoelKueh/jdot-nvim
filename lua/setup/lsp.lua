@@ -4,6 +4,18 @@ local function map(mode, l, r, desc)
 	vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
 end
 
+function M.setup_conform()
+	--local conform = require("conform")
+	require("conform").setup({
+		formatters_by_ft = {
+			verilog = { "verible" },
+			systemverilog = { "verible" }
+		},
+	})
+	map('n','<leader>ff',
+	    '<cmd>lua require("conform").format({ async = true })<CR>')
+end
+
 local function setup_clangd()
 	local lspconf = require("lspconfig")
 	lspconf.clangd.setup({
@@ -12,7 +24,7 @@ local function setup_clangd()
 --			'--query-driver=/usr/bin/g++',
 --			'--query-driver=/opt/microchip/xc16/v2.10/bin/xc16-gcc'
 --		},
-		filetypes = { "c", "cpp" },
+		filetypes = { "c", "cpp", "h", "hpp", "cu" },
 	})
 end
 
@@ -103,7 +115,7 @@ function M.setup_lsp()
 	lspconf.pylsp.setup({})
 	lspconf.ltex.setup({})
 	--lspconf.omnisharp.setup({})
-	
+
 	-- Keybinds
 	map('n','gD','<cmd>lua vim.lsp.buf.declaration()<CR>')
 	map('n','gd','<cmd>lua vim.lsp.buf.definition()<CR>')
