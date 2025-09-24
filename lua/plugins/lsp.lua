@@ -34,12 +34,6 @@ return {
 		},
 		config = lsp.setup_lsp
 	},
-	-- knap
-	{
-		"frabjous/knap",
-		lazy = false,
-		config = lsp.setup_knap
-	},
 	-- typst-preview
 	{
 		'chomosuke/typst-preview.nvim',
@@ -52,16 +46,6 @@ return {
 		'kaarmu/typst.vim',
 		ft = 'typst',
 		lazy=false,
-	},
-	-- nvim-dap
-	{
-		'mfussenegger/nvim-dap',
-		lazy=true
-	},
-	-- system-verilog
-	{
-		'vhda/verilog_systemverilog.vim',
-		lazy=true
 	},
 	-- conform.nvim
 	{
