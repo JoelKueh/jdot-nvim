@@ -18,11 +18,6 @@ return {
 		},
 		config = setup.setup_telescope
 	},
-	-- persistence
-	{
-		"folke/persistence.nvim",
-		config = setup.setup_persistence
-	},
 	-- gitsigns
 	{
 		"lewis6991/gitsigns.nvim",
@@ -56,17 +51,6 @@ return {
 		dependencies = {
 			'nvim-lua/plenary.nvim',
 		},
-		opts = {
-
-		}
-	},
-	-- hexer
-	{
-		'RaafatTurki/hex.nvim',
-		config = function()
-			vim.keymap.set("n", '<leader>hv', require 'hex'.toggle, {
-				desc="Open hex editor"
-			})
-		end
+		opts = {}
 	}
 }

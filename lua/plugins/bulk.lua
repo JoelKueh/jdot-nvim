@@ -1,14 +1,9 @@
 local setup = require('setup.bulk')
 
 return {
-	-- if some code requires a module from an unloaded plugin, it will be automatically loaded.
-	-- So for api plugins like devicons, we can always set lazy=true
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
-
-	-- you can use the VeryLazy event for things that can
-	-- load later and are not important for the initial UI
 	{ "stevearc/dressing.nvim", event = "VeryLazy" },
-
+	-- which-key
 	{
 		"folke/which-key.nvim",
 		opts = {
@@ -47,6 +42,7 @@ return {
 		config = setup.setup_dashboard,
 		dependencies = { {'nvim-tree/nvim-web-devicons'}}
 	},
+	-- icon-picker
 	{
 		"ziontee113/icon-picker.nvim",
 		config = function()

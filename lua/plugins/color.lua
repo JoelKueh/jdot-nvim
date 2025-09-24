@@ -1,6 +1,5 @@
 
 return {
-	-- the colorscheme should be available when starting Neovim
 	{
 		"gbprod/nord.nvim",
 		event = "VeryLazy",
@@ -21,7 +20,7 @@ return {
 	{
 		"catppuccin/nvim",
 		lazy = false,
-		priority = 1000, -- make sure to load this before all the other start plugins
+		priority = 1000,
 		config = function()
 			vim.cmd.colorscheme("catppuccin-mocha")
 		end
