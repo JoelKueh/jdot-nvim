@@ -44,11 +44,12 @@ return {
     {
         'kaarmu/typst.vim',
         ft = 'typst',
-        lazy=false,
+        lazy = true,
     },
     -- conform.nvim
     {
         'stevearc/conform.nvim',
-        config = lsp.setup_conform
+        config = lsp.setup_conform,
+        lazy = true,
     }
 }
