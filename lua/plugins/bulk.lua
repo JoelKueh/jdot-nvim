@@ -8,6 +8,7 @@ return {
         "folke/which-key.nvim",
         opts = {
             plugins = { spelling = true },
+            delay = 0,
             defaults = {
                 mode = { "n", "v" },
                 ["g"] = { name = "+goto" },

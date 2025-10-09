@@ -76,67 +76,7 @@ end
 function M.setup_telescope()
     local telescope = require("telescope")
     local builtin = require("telescope.builtin")
-
     telescope.load_extension("undo")
-
-    -- File pickers
-    vim.keymap.set("n", '<leader>pf', builtin.find_files, {
-        desc="Fuzzy find files"
-    })
-    vim.keymap.set("n", '<leader>ps', builtin.live_grep, {
-        desc="Fuzzy live grep"
-    })
-    vim.keymap.set("n", '<leader>pb', builtin.buffers, {
-        desc="Fuzzy open buffers"
-    })
-
-    -- Lsp pickers
-    vim.keymap.set("n", '<leader>pe', builtin.diagnostics, {
-        desc="Fuzzy lsp diagnostics"
-    })
-    vim.keymap.set("n", '<leader>pr', builtin.lsp_references, {
-        desc="Fuzzy lsp references"
-    })
-    vim.keymap.set("n", '<leader>pi', builtin.lsp_incoming_calls, {
-        desc="Fuzzy lsp incoming"
-    })
-    vim.keymap.set("n", '<leader>po', builtin.lsp_outgoing_calls, {
-        desc="Fuzzy lsp outgoing"
-    })
-    vim.keymap.set("n", '<leader>pyd', builtin.lsp_document_symbols, {
-        desc="Fuzzy document symbols"
-    })
-    vim.keymap.set("n", '<leader>pyw', builtin.lsp_workspace_symbols, {
-        desc="Fuzzy document symbols"
-    })
-
-    -- Utility pickers
-    vim.keymap.set("n", '<leader>pc', builtin.colorscheme, {
-        desc="Fuzzy colorscheme"
-    })
-    vim.keymap.set("n", '<leader>pu', '<cmd>Telescope undo<cr>', {
-        desc="Fuzzy undotree"
-    })
-    vim.keymap.set("n", '<leader>pt', '<cmd>TodoTelescope<cr>', {
-        desc="Fuzzy todo"
-    })
-
-    -- Git pickers
-    vim.keymap.set("n", '<leader>gf', builtin.git_files, {
-        desc="Fuzzy git files"
-    })
-    vim.keymap.set("n", '<leader>gc', builtin.git_commits, {
-        desc="Fuzzy git commits"
-    })
-    vim.keymap.set("n", '<leader>gs', builtin.git_stash, {
-        desc="Fuzzy git stashes"
-    })
-    vim.keymap.set("n", '<leader>gb', builtin.git_branches, {
-        desc="Fuzzy git branches"
-    })
-    vim.keymap.set("n", '<leader>gt', builtin.git_status, {
-        desc="Fuzzy git status"
-    })
 end
 
 function M.attach_gitsigns(buffer)
