@@ -46,10 +46,4 @@ return {
         ft = 'typst',
         lazy = true,
     },
-    -- conform.nvim
-    {
-        'stevearc/conform.nvim',
-        config = lsp.setup_conform,
-        lazy = true,
-    }
 }
