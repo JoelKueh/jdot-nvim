@@ -5,16 +5,16 @@ local function map(mode, l, r, desc)
     vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
 end
 
---function M.setup_conform()
---    require("conform").setup({
---        formatters_by_ft = {
---            verilog = { "verible" },
---            systemverilog = { "verible" }
---        },
---    })
---    map('n','<leader>ff',
---        '<cmd>lua require("conform").format({ async = true })<CR>')
---end
+function M.setup_conform()
+    require("conform").setup({
+        formatters_by_ft = {
+            verilog = { "verible" },
+            systemverilog = { "verible" }
+        },
+    })
+    map('n','<leader>ff',
+        '<cmd>lua require("conform").format({ async = true })<CR>')
+end
 
 local function setup_clangd()
     vim.lsp.config('clangd', {})
@@ -93,7 +93,6 @@ function M.setup_lsp()
     vim.lsp.enable('jdtls')
     vim.lsp.enable('pyright')
     vim.lsp.enable('ltex')
-    vim.lsp.enable('omnisharp')
 
     -- Keybinds
     map('n','gD','<cmd>lua vim.lsp.buf.declaration()<CR>')
