@@ -57,8 +57,11 @@ end
 
 local function setup_verible()
     local lspconf = vim.lsp.config
-    lspconf.verible.setup({
-        cmd = {'verible-verilog-ls', '--rules_config_search'},
+    lspconf.setup({
+        cmd = {
+            "verible-verilog-ls",
+            "--rules_config_search=true",
+        },
         root_dir = function() return vim.loop.cwd() end
     })
 end

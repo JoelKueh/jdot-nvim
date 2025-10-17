@@ -32,6 +32,10 @@ function M.setup_treesitter()
             "yaml",
             "latex"
         },
+        disable = {
+            "verilog",
+            "systemverilog"
+        },
         incremental_selection = {
             enable = true,
             keymaps = {

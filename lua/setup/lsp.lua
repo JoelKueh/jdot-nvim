@@ -5,16 +5,16 @@ local function map(mode, l, r, desc)
     vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
 end
 
-function M.setup_conform()
-    require("conform").setup({
-        formatters_by_ft = {
-            verilog = { "verible" },
-            systemverilog = { "verible" }
-        },
-    })
-    map('n','<leader>ff',
-        '<cmd>lua require("conform").format({ async = true })<CR>')
-end
+--function M.setup_conform()
+--    require("conform").setup({
+--        formatters_by_ft = {
+--            verilog = { "verible" },
+--            systemverilog = { "verible" }
+--        },
+--    })
+--    map('n','<leader>ff',
+--        '<cmd>lua require("conform").format({ async = true })<CR>')
+--end
 
 local function setup_clangd()
     vim.lsp.config('clangd', {})
@@ -51,8 +51,10 @@ end
 
 local function setup_verible()
     vim.lsp.config('verible', {
-        cmd = {'verible-verilog-ls', '--rules_config_search'},
-        root_dir = function() return vim.loop.cwd() end
+        cmd = {
+            "verible-verilog-ls",
+            "--rules_config_search",
+        }
     })
     vim.lsp.enable('verible')
 end
