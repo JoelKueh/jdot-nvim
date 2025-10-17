@@ -5,17 +5,6 @@ local function map(mode, l, r, desc)
     vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
 end
 
-function M.setup_conform()
-    require("conform").setup({
-        formatters_by_ft = {
-            verilog = { "verible" },
-            systemverilog = { "verible" }
-        },
-    })
-    map('n','<leader>ff',
-        '<cmd>lua require("conform").format({ async = true })<CR>')
-end
-
 local function setup_clangd()
     vim.lsp.config('clangd', {})
     vim.lsp.enable('clangd')
@@ -108,7 +97,7 @@ function M.setup_lsp()
     map('n','<leader>af','<cmd>lua vim.lsp.buf.code_action()<CR>')
     map('n','<leader>ee','<cmd>lua vim.lsp.util.show_line_diagnostics()<CR>')
     map('n','<leader>ar','<cmd>lua vim.lsp.buf.rename()<CR>')
-    map('n','<leader>=', '<cmd>lua vim.lsp.buf.formatting()<CR>')
+    map('n','<leader>=', '<cmd>lua vim.lsp.buf.format()<CR>')
     map('n','<leader>ai','<cmd>lua vim.lsp.buf.incoming_calls()<CR>')
     map('n','<leader>ao','<cmd>lua vim.lsp.buf.outgoing_calls()<CR>')
 end
