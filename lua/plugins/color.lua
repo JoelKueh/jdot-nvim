@@ -19,12 +19,7 @@ return {
     },
     {
         "catppuccin/nvim",
-
-        lazy = false,
-        priority = 1000,
-        config = function()
-            vim.cmd.colorscheme("catppuccin-mocha")
-        end
+        event = "VeryLazy"
     },
     {
         "Mofiqul/vscode.nvim",
@@ -44,7 +39,11 @@ return {
     },
     {
         "savq/melange-nvim",
-        event = "VeryLazy"
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.cmd.colorscheme("melange")
+        end
     },
     {
         "rebelot/kanagawa.nvim",
