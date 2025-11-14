@@ -82,6 +82,7 @@ function M.setup_lsp()
     vim.lsp.enable('jdtls')
     vim.lsp.enable('pyright')
     vim.lsp.enable('ltex')
+    vim.lsp.enable('alloy_ls')
 
     -- Keybinds
     map('n','gD','<cmd>lua vim.lsp.buf.declaration()<CR>')
